@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alkemist — UX/UI Design Portfolio 2026</title>
+  <meta name="description"
+    content="Portfolio de diseño UX/UI de Alkemist. Identidad visual, diseño de productos digitales, branding y sistemas de diseño.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Shantell+Sans:ital,wght@0,400;0,600;0,700;1,600&family=Urbanist:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'grid-bg': '#F4EAE2',
+            'alk-blue': '#2741E3',
+            'alk-blue-dark': '#193DBD',
+            'alk-orange': '#E5481B',
+            'alk-orange-light': '#E8822B',
+            'alk-red': '#C10D32',
+            'alk-red-dark': '#B51827',
+            'alk-berry': '#75315A',
+            'alk-green-dark': '#1F421D',
+            'alk-green-forest': '#265D27',
+            'alk-vivid-orange': '#FA3300',
+            'alk-teal': '#06766E',
+            'alk-teal-bright': '#00928D',
+            'alk-crimson': '#730C1C',
+            'alk-mint': '#D0E7D8',
+            'alk-purple': '#5447B8',
+            'alk-purple-deep': '#3E3799',
+            'alk-yellow': '#F9B208'
+          },
+          fontFamily: {
+            sans: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            urbanist: ['Urbanist', 'sans-serif'],
+            futura: ['Jost', 'sans-serif'],
+            cursive: ['Shantell Sans', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Warm paper grid */
+    .bg-grid-warm {
+      background-color: #F4EAE2;
+      background-image:
+        linear-gradient(to right, rgba(215, 185, 170, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(215, 185, 170, 0.45) 1px, transparent 1px);
+      background-size: 38px 38px;
+    }
+
+    /* Blue grid */
+    .bg-grid-blue {
+      background-color: #193DBD;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+      background-size: 38px 38px;
+    }
+
+    /* Orange grid */
+    .bg-grid-orange {
+      background-color: #E8832A;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+      background-size: 38px 38px;
+    }
+
+    /* Blueprint grid */
+    .bg-grid-blueprint {
+      background-color: #102B20;
+      background-image:
+        linear-gradient(to right, rgba(160, 210, 170, 0.22) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(160, 210, 170, 0.22) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* 3D block text shadows */
+    .text-shadow-3d-blue {
+      text-shadow:
+        4px 4px 0 #1228A0,
+        8px 8px 0 #1228A0,
+        12px 12px 0 #1228A0,
+        16px 16px 0 rgba(18, 40, 160, 0.35);
+    }
+
+    .text-outline-blue {
+      -webkit-text-stroke: 4px #2741E3;
+      color: transparent;
+    }
+
+    /* Scalloped top border mask */
+    .scalloped-top-envelope {
+      background-image: radial-gradient(circle at 14px 0px, transparent 12px, #E8822B 13px);
+      background-size: 28px 100%;
+    }
+
+    /* Barcode pseudo-patterns */
+    .barcode-lines {
+      background: repeating-linear-gradient(90deg,
+          #111,
+          #111 2px,
+          transparent 2px,
+          transparent 5px,
+          #111 5px,
+          #111 9px,
+          transparent 9px,
+          transparent 11px,
+          #111 11px,
+          #111 12px,
+          transparent 12px,
+          transparent 16px);
+    }
+
+    .barcode-lines-white {
+      background: repeating-linear-gradient(90deg,
+          #FFF,
+          #FFF 2px,
+          transparent 2px,
+          transparent 5px,
+          #FFF 5px,
+          #FFF 9px,
+          transparent 9px,
+          transparent 11px,
+          #FFF 11px,
+          #FFF 12px,
+          transparent 12px,
+          transparent 16px);
+    }
+
+    .sticker-badge {
+      box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body class="bg-[#191919] text-[#222] font-sans antialiased selection:bg-alk-blue selection:text-white">
+
+  <!-- Main Container (Matching 1440px Canvas) -->
+  <main class="max-w-[1440px] mx-auto bg-white shadow-2xl relative overflow-hidden">
+
+    <!-- ==========================================
+         SECTION 1: HERO HEADER
+    =========================================== -->
+    <header id="hero"
+      class="bg-grid-warm relative pt-10 pb-16 px-6 sm:px-12 border-b-2 border-stone-300 overflow-hidden">
+
+      <!-- Top Bar: Monogram Badge & Character Sketch with "SEO OK" -->
+      <div class="flex items-center justify-between relative z-10 max-w-6xl mx-auto mb-2">
+        <!-- Logo Stamp Badge -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-16 h-16 sm:w-20 sm:h-20 bg-[#E5481B] rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white/60 transform -rotate-6 hover:rotate-0 transition-transform">
+            <!-- Monogram icon -->
+            <svg class="w-10 h-10 stroke-current fill-none stroke-[2.5]" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m-7-9h14M7 7l10 10M17 7L7 17" />
+            </svg>
+          </div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-[#E5481B] hidden sm:inline-block">ALKEMIST
+            STUDIO</span>
+        </div>
+
+        <!-- Mascot Bunny Character Outline with Sunglasses & "SEO ★ OK" -->
+        <div class="flex items-center gap-2 relative">
+          <div class="text-right">
+            <span class="inline-block text-[#E5481B] font-extrabold text-sm tracking-wider">SEO ★ OK</span>
+          </div>
+          <!-- SVG Mascot Illustration -->
+          <div class="w-24 h-24 sm:w-28 sm:h-28 relative">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+              <!-- Bunny Ears -->
+              <ellipse cx="38" cy="22" rx="7" ry="18" fill="none" stroke="#E5481B" stroke-width="3.5"
+                transform="rotate(-8 38 22)" />
+              <ellipse cx="62" cy="22" rx="7" ry="18" fill="none" stroke="#E5481B" stroke-width="3.5"
+                transform="rotate(8 62 22)" />
+              <!-- Head -->
+              <circle cx="50" cy="55" r="28" fill="#F4EAE2" stroke="#E5481B" stroke-width="3.5" />
+              <!-- Sunglasses -->
+              <path d="M 32 48 Q 42 48 42 56 Q 32 58 32 48 Z" fill="#E5481B" />
+              <path d="M 58 48 Q 68 48 68 56 Q 58 58 58 48 Z" fill="#E5481B" />
+              <path d="M 42 51 L 58 51" stroke="#E5481B" stroke-width="3" />
+              <!-- Smile & Wink -->
+              <path d="M 45 68 Q 50 72 55 68" fill="none" stroke="#E5481B" stroke-width="3" stroke-linecap="round" />
+              <!-- Hair bangs -->
+              <path d="M 28 42 Q 40 32 50 42 Q 60 32 72 42" fill="none" stroke="#E5481B" stroke-width="3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Center Typography: PORT / FOLIO -->
+      <div class="relative z-10 text-center max-w-5xl mx-auto my-4 sm:my-6">
+        <!-- Outlined PORT (showing grid paper through it) -->
+        <h1
+          class="text-7xl sm:text-9xl md:text-[13rem] font-black tracking-tight leading-[0.85] text-outline-blue uppercase">
+          PORT
+        </h1>
+        <!-- Solid Blue FOLIO with 3D drop shadow -->
+        <h2
+          class="text-7xl sm:text-9xl md:text-[13rem] font-black tracking-tight leading-[0.85] text-alk-blue uppercase text-shadow-3d-blue -mt-2 sm:-mt-6">
+          FOLIO
+        </h2>
+
+        <!-- Barcode with positive message & Floral Badge -->
+        <div class="mt-8 flex items-center justify-center gap-6 relative">
+          <div class="flex flex-col items-center">
+            <div class="w-48 sm:w-64 h-8 barcode-lines"></div>
+            <p class="text-[10px] sm:text-xs font-mono font-bold tracking-widest text-slate-700 mt-1 uppercase">Sending
+              you good vibes ★ Alkemist 2026</p>
+          </div>
+
+          <!-- Blue Floral Stamp Badge -->
+          <div
+            class="w-14 h-14 bg-[#638AE9] rounded-2xl rotate-12 flex items-center justify-center text-white font-extrabold text-2xl shadow-md border-2 border-white/50">
+            ❀
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Edge Ribbon Tag: "UX/UI Designer" -->
+      <div class="absolute right-0 top-36 sm:top-48 z-20">
+        <div
+          class="bg-alk-blue text-white font-black text-xs sm:text-sm tracking-widest px-4 py-8 rounded-l-2xl shadow-xl flex items-center justify-center [writing-mode:vertical-rl] rotate-180 transform uppercase">
+          UX/UI Designer
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ==========================================
+         SECTION 2: ABOUT / SOFTWARE SKILLS / EXPERIENCIA / EDUCATION
+    =========================================== -->
+    <section id="about" class="bg-grid-warm relative px-4 sm:px-12 py-10">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- LEFT COLUMN (col-span-5): SOFTWARE SKILLS & EXPERIENCIA -->
+        <div class="lg:col-span-5 space-y-8">
+
+          <!-- Card 1: LET'S SEE.... SOFTWARE SKILLS -->
+          <div class="bg-[#E5481B] text-white rounded-[2.5rem] p-6 sm:p-8 shadow-xl relative border-4 border-white/40">
+            <h3 class="text-3xl sm:text-4xl font-black tracking-tight">LET'S SEE....</h3>
+
+            <div class="mt-4 mb-6">
+              <span class="text-sm font-extrabold uppercase tracking-wider text-orange-200">SOFTWARE SKILLS</span>
+              <div class="border-b-2 border-dotted border-white/40 mt-1"></div>
+            </div>
+
+            <!-- Skill Items -->
+            <div class="space-y-4">
+              <!-- Adobe Illustrator -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-bold mb-1">
+                  <span>Adobe Ilustrador</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-black">100%</span>
+                    <span class="text-yellow-300">★★★</span>
+                  </div>
+                </div>
+                <div class="h-6 bg-white/20 rounded-full p-1">
+                  <div class="h-full bg-white rounded-full w-full"></div>
+                </div>
+              </div>
+
+              <!-- Adobe Photoshop -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-bold mb-1">
+                  <span>Adobe Photoshop</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-black">90%</span>
+                    <span class="text-yellow-300">★★☆</span>
+                  </div>
+                </div>
+                <div class="h-6 bg-white/20 rounded-full p-1">
+                  <div class="h-full bg-white rounded-full w-[90%]"></div>
+                </div>
+              </div>
+
+              <!-- After Effects -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-bold mb-1">
+                  <span>After Effects</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-black">90%</span>
+                    <span class="text-yellow-300">★★☆</span>
+                  </div>
+                </div>
+                <div class="h-6 bg-white/20 rounded-full p-1">
+                  <div class="h-full bg-white rounded-full w-[90%]"></div>
+                </div>
+              </div>
+
+              <!-- Adobe Lightroom -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-bold mb-1">
+                  <span>Adobe Lightroom</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-black">80%</span>
+                    <span class="text-yellow-300">★☆☆</span>
+                  </div>
+                </div>
+                <div class="h-6 bg-white/20 rounded-full p-1">
+                  <div class="h-full bg-white rounded-full w-[80%]"></div>
+                </div>
+              </div>
+
+              <!-- Procreate -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-bold mb-1">
+                  <span>Procreate</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-black">80%</span>
+                    <span class="text-yellow-300">★☆☆</span>
+                  </div>
+                </div>
+                <div class="h-6 bg-white/20 rounded-full p-1">
+                  <div class="h-full bg-white rounded-full w-[80%]"></div>
+                </div>
+              </div>
+
+              <!-- Adobe Premiere Pro -->
+              <div>
+                <div class="flex justify-between items-center text-xs font-bold mb-1">
+                  <span>Adobe Premiere Pro</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-black">80%</span>
+                    <span class="text-yellow-300">★☆☆</span>
+                  </div>
+                </div>
+                <div class="h-6 bg-white/20 rounded-full p-1">
+                  <div class="h-full bg-white rounded-full w-[80%]"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Peeking Character Sticker (Bottom Right of Card) -->
+            <div
+              class="absolute -right-6 -bottom-6 w-20 h-20 bg-white rounded-full p-1.5 shadow-xl border-2 border-stone-200 transform rotate-12">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <circle cx="50" cy="50" r="45" fill="#638AE9" />
+                <!-- Sunglasses & Smile -->
+                <rect x="25" y="40" width="22" height="16" rx="5" fill="#191919" />
+                <rect x="53" y="40" width="22" height="16" rx="5" fill="#191919" />
+                <line x1="47" y1="48" x2="53" y2="48" stroke="#191919" stroke-width="3" />
+                <path d="M 40 68 Q 50 76 60 68" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 2: EXPERIENCIA (Blue card with stitch effect and rotated year rails) -->
+          <div
+            class="bg-[#2B45FE] text-white rounded-[2.5rem] p-6 sm:p-8 shadow-xl relative border-4 border-white/40 overflow-hidden">
+            <!-- Jagged stitch zig-zag decoration at top -->
+            <div class="w-full h-3 mb-4 overflow-hidden opacity-70">
+              <svg class="w-full h-full stroke-white fill-none stroke-[2]" preserveAspectRatio="none"
+                viewBox="0 0 400 10">
+                <path
+                  d="M0 5 L10 0 L20 10 L30 0 L40 10 L50 0 L60 10 L70 0 L80 10 L90 0 L100 10 L110 0 L120 10 L130 0 L140 10 L150 0 L160 10 L170 0 L180 10 L190 0 L200 10 L210 0 L220 10 L230 0 L240 10 L250 0 L260 10 L270 0 L280 10 L290 0 L300 10 L310 0 L320 10 L330 0 L340 10 L350 0 L360 10 L370 0 L380 10 L390 0 L400 10" />
+              </svg>
+            </div>
+
+            <h3 class="text-3xl font-black tracking-tight mb-2 uppercase">EXPERIENCIA</h3>
+            <div class="border-b-2 border-dotted border-white/40 mb-6"></div>
+
+            <!-- Timeline Entries with Vertical Year Rails -->
+            <div class="space-y-6 text-sm">
+              <!-- Item 1 -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="[writing-mode:vertical-rl] rotate-180 text-xs font-mono font-black text-blue-200 tracking-wider">
+                  2024-2025
+                </div>
+                <div class="border-l-2 border-white/30 pl-3">
+                  <h4 class="font-bold text-base">Starwild / NaturHotel</h4>
+                  <p class="text-xs text-blue-200">Cuenca, Ecuador</p>
+                  <p class="text-white/80 text-xs mt-0.5">Diseño Gráfico, Diseño Web</p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="[writing-mode:vertical-rl] rotate-180 text-xs font-mono font-black text-blue-200 tracking-wider">
+                  2024-2025
+                </div>
+                <div class="border-l-2 border-white/30 pl-3">
+                  <h4 class="font-bold text-base">Blu Galápagos</h4>
+                  <p class="text-xs text-blue-200">Cuenca, Ecuador</p>
+                  <p class="text-white/80 text-xs mt-0.5">Diseño Gráfico, Diseño Editorial</p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="[writing-mode:vertical-rl] rotate-180 text-xs font-mono font-black text-blue-200 tracking-wider">
+                  2025-Act.
+                </div>
+                <div class="border-l-2 border-white/30 pl-3">
+                  <h4 class="font-bold text-base">Otra Perspectiva (Agencia)</h4>
+                  <p class="text-xs text-blue-200">Cuenca, Ecuador</p>
+                  <p class="text-white/80 text-xs mt-0.5">Diseño Gráfico, Audiovisuales, Animación, Branding.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN (col-span-7): HELLOUS! BIO, PHOTO, EDUCATION & SKILLS -->
+        <div class="lg:col-span-7 space-y-8">
+
+          <!-- Card 3: HELLOUS!! ORANGE CARD WITH SCALLOP TOP & CHARACTER -->
+          <div class="bg-[#E8822B] text-white rounded-[2.5rem] p-6 sm:p-8 shadow-xl relative border-4 border-white/40">
+
+            <!-- Top Scalloped Header with Star Sticker -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <h3 class="text-4xl sm:text-5xl font-black tracking-tight uppercase">HELLOUS!!</h3>
+                <span class="inline-block bg-[#F9B208] text-white text-2xl p-1.5 rounded-2xl rotate-12 shadow">★</span>
+              </div>
+              <span
+                class="bg-[#2741E3] text-white text-xs font-mono font-extrabold px-3 py-1 rounded-full uppercase tracking-wider sticker-badge">#CHIFLES
+                & QUESO</span>
+            </div>
+
+            <!-- Grid inside Hellous: Bio Text & Photo with Badges -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+
+              <!-- Bio Text Box with Barcode -->
+              <div
+                class="md:col-span-7 bg-[#E5481B]/80 p-5 rounded-2xl border border-white/30 relative flex flex-col justify-between">
+                <div>
+                  <p class="text-xs sm:text-sm leading-relaxed text-white font-medium">
+                    Me llamo Cristina (Alkemist), pero en el mundo del diseño me divido en dos. Por fuera me ves seria,
+                    súper organizada y responsable. Pero mi verdadero 'yo' creativo vive obsesionado con los colores,
+                    los gatos y las texturas cálidas.
+                  </p>
+                  <p class="text-xs sm:text-sm leading-relaxed text-white/95 font-medium mt-3">
+                    Aunque no parezca que amo el arcoíris por mi look serio, mis diseños hablan por mí: son el mix
+                    perfecto entre el profesionalismo y la chispa divertida. ¡Bienvenidos a mi caos ordenado!
+                  </p>
+                </div>
+                <!-- Barcode label -->
+                <div class="mt-4 pt-3 border-t border-white/20 flex items-center justify-between">
+                  <div class="w-28 h-5 barcode-lines-white"></div>
+                  <span class="text-[9px] font-mono tracking-widest text-white/80">¿QUÉ TANTO ES TANTITO?</span>
+                </div>
+              </div>
+
+              <!-- Designer Photo with Pantone Swatches Placeholder -->
+              <div class="md:col-span-5 flex flex-col items-center">
+                <div
+                  class="relative w-44 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-stone-200">
+                  <img src="https://placehold.co/400x520/E5481B/FFFFFF?text=Designer+with+Pantone"
+                    alt="Alkemist Designer" class="w-full h-full object-cover" />
+                  <div
+                    class="absolute top-2 right-2 bg-[#2741E3] text-white text-[9px] font-mono font-extrabold px-2 py-0.5 rounded shadow">
+                    #CHIFLES & QUESO
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Walking Illustrated Character with Personality Badges -->
+            <div class="mt-6 pt-4 border-t border-white/25 flex flex-col items-center">
+              <!-- SVG Character walking with bag -->
+              <div class="w-32 h-32 relative mb-2">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <!-- Head -->
+                  <circle cx="50" cy="35" r="16" fill="white" stroke="#E5481B" stroke-width="2.5" />
+                  <!-- Poncho/Bag -->
+                  <path d="M 35 48 L 65 48 L 72 75 L 28 75 Z" fill="#F4EAE2" stroke="#E5481B" stroke-width="2.5" />
+                  <!-- Legs walking -->
+                  <path d="M 40 75 L 35 92 L 45 92" stroke="#E5481B" stroke-width="2.5" fill="none" />
+                  <path d="M 60 75 L 68 88 L 76 88" stroke="#E5481B" stroke-width="2.5" fill="none" />
+                </svg>
+              </div>
+
+              <!-- Personality Badges Row -->
+              <div class="flex flex-wrap justify-center gap-2">
+                <span
+                  class="bg-[#193DBD] text-white text-xs font-bold px-3 py-1 rounded-lg uppercase tracking-wide sticker-badge">INTROVERTIDA</span>
+                <span
+                  class="bg-[#C10D32] text-white text-xs font-bold px-3 py-1 rounded-lg uppercase tracking-wide sticker-badge">CREATIVA</span>
+                <span
+                  class="bg-[#F9B208] text-stone-900 text-xs font-bold px-3 py-1 rounded-lg uppercase tracking-wide sticker-badge">CURIOSA</span>
+                <span
+                  class="bg-[#2741E3] text-white text-xs font-bold px-3 py-1 rounded-lg uppercase tracking-wide sticker-badge">CHIFLES
+                  LOVER</span>
+                <span
+                  class="bg-white text-[#E5481B] text-xs font-extrabold px-3 py-1 rounded-lg uppercase tracking-wide sticker-badge">ORDENADA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: EDUCACIÓN & SKILLS -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+            <!-- Card 4: EDUCACIÓN -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl border-4 border-stone-200">
+              <div class="flex items-center justify-between mb-4">
+                <h4 class="text-2xl font-black text-[#E5481B] tracking-tight uppercase">EDUCACIÓN</h4>
+                <span
+                  class="bg-[#E8822B] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Estudios</span>
+              </div>
+
+              <div class="space-y-4 text-xs">
+                <div>
+                  <span class="font-mono text-stone-400 font-bold">2019 - 2024</span>
+                  <h5 class="font-bold text-stone-900 text-sm">Universidad</h5>
+                  <p class="text-stone-600">Lic. Diseño Gráfico. Universidad de Cuenca. Cuenca, Ecuador.</p>
+                </div>
+
+                <div>
+                  <span class="font-mono text-stone-400 font-bold">2025 - 2026</span>
+                  <h5 class="font-bold text-stone-900 text-sm">Maestría</h5>
+                  <p class="text-stone-600">Diseño Gráfico... Universidad de La Rioja.</p>
+                </div>
+
+                <div class="pt-3 border-t border-stone-200">
+                  <span
+                    class="bg-[#C10D32] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase inline-block mb-1.5">Cursos</span>
+                  <p class="text-[11px] text-stone-700"><strong>2016-2017:</strong> Adobe certified associate, Visual
+                    Design using Adobe Photoshop. UESMA Cuenca, Ecuador.</p>
+                  <p class="text-[11px] text-stone-700 mt-1"><strong>2017-2018:</strong> Adobe certified associate,
+                    Graphic Design and Illustration using Illustrator CC 2015. UESMA.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: SKILLS & IDIOMAS -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl border-4 border-stone-200 flex flex-col justify-between">
+              <div>
+                <h4 class="text-2xl font-black text-[#C10D32] tracking-tight uppercase mb-4">SKILLS</h4>
+
+                <div class="space-y-3 text-xs font-bold text-stone-700">
+                  <div class="flex justify-between items-center border-b border-dotted border-stone-300 pb-1">
+                    <span>Fotografía</span>
+                    <span class="text-yellow-400 text-base">★</span>
+                  </div>
+                  <div class="flex justify-between items-center border-b border-dotted border-stone-300 pb-1">
+                    <span>Ilustración</span>
+                    <span class="text-yellow-400 text-base">★</span>
+                  </div>
+                  <div class="flex justify-between items-center border-b border-dotted border-stone-300 pb-1">
+                    <span>Diseño</span>
+                    <span class="text-yellow-400 text-base">★</span>
+                  </div>
+                  <div class="flex justify-between items-center border-b border-dotted border-stone-300 pb-1">
+                    <span>Edición</span>
+                    <span class="text-yellow-400 text-base">★</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Blue box: Idiomas -->
+              <div class="mt-4 bg-[#2741E3] text-white p-3 rounded-2xl text-[11px]">
+                <div class="flex justify-between">
+                  <span class="font-bold">Idiomas:</span>
+                  <span>Español · Inglés</span>
+                </div>
+                <div class="flex justify-between mt-1 text-blue-200">
+                  <span>Principiante:</span>
+                  <span>Italiano · Coreano</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 3: TRANSITION BANNER — "MY WORK"
+    =========================================== -->
+    <div id="my-work" class="bg-grid-blue relative py-16 px-6 text-center text-white border-y-4 border-white/20">
+
+      <!-- Folder Tab: "MY WORK" (Sticking out at top right) -->
+      <div class="absolute right-8 -top-8 z-20">
+        <div
+          class="bg-[#2741E3] text-white text-base font-black px-8 py-3 rounded-t-2xl border-t-4 border-x-4 border-white/40 tracking-wider shadow-lg uppercase">
+          MY WORK
+        </div>
+      </div>
+
+      <!-- Mascot Character Art Centerpiece with Sparkles & "SEO OK" -->
+      <div class="max-w-md mx-auto mb-6 relative">
+        <div class="w-48 h-48 sm:w-56 sm:h-56 mx-auto relative">
+          <svg viewBox="0 0 120 120" class="w-full h-full filter drop-shadow-xl">
+            <!-- Bunny Ears -->
+            <path d="M 45 40 Q 40 5 52 10 Q 60 15 54 42" fill="white" stroke="#2741E3" stroke-width="4" />
+            <path d="M 75 40 Q 80 5 68 10 Q 60 15 66 42" fill="white" stroke="#2741E3" stroke-width="4" />
+            <!-- Head -->
+            <ellipse cx="60" cy="65" rx="36" ry="30" fill="white" stroke="#2741E3" stroke-width="4" />
+            <!-- Sunglasses -->
+            <rect x="36" y="55" width="20" height="15" rx="5" fill="#2741E3" />
+            <rect x="64" y="55" width="20" height="15" rx="5" fill="#2741E3" />
+            <line x1="56" y1="62" x2="64" y2="62" stroke="#2741E3" stroke-width="3" />
+            <!-- Cute Smile -->
+            <path d="M 52 82 Q 60 88 68 82" stroke="#2741E3" stroke-width="3.5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Stickers floating around -->
+        <span
+          class="absolute left-6 top-10 bg-yellow-400 text-stone-900 text-xs font-black p-2 rounded-xl rotate-[-15deg] shadow">★
+          SEO OK</span>
+        <span
+          class="absolute right-6 top-14 bg-pink-500 text-white text-xs font-black p-2 rounded-xl rotate-[15deg] shadow">100%
+          VIBE</span>
+      </div>
+
+      <h3 class="text-2xl sm:text-4xl font-black uppercase tracking-wider text-white">
+        MIS DOS PERSONALIDADES Y YO LO APROBAMOS
+      </h3>
+    </div>
+
+
+    <!-- ==========================================
+         SECTION 4: CASE STUDY 1 — "alpi FRUIT"
+    =========================================== -->
+    <article id="project-alpi" class="relative bg-[#C10D32] text-white">
+
+      <!-- Top Red Banner with Yellow Hanging Bookmark -->
+      <div class="relative pt-16 pb-12 px-6 sm:px-12 text-center">
+        <!-- Bookmark ribbon on right edge -->
+        <div
+          class="absolute right-8 top-0 w-12 sm:w-16 h-28 bg-[#F9B208] shadow-2xl rounded-b-lg flex flex-col justify-end items-center pb-2">
+          <div
+            class="w-0 h-0 border-x-[24px] sm:border-x-[32px] border-x-transparent border-t-[18px] border-t-white -mb-2">
+          </div>
+        </div>
+
+        <!-- Big Logo: alpi FRUIT -->
+        <div class="inline-block">
+          <h2 class="text-7xl sm:text-9xl font-black tracking-tight lowercase">
+            alpi
+          </h2>
+          <span class="block text-xl sm:text-2xl font-black uppercase tracking-[0.3em] text-white/90 -mt-2">
+            FRUIT
+          </span>
+        </div>
+      </div>
+
+      <!-- Cream Banner: Brand Description -->
+      <div class="bg-[#FFFDF1] text-stone-800 py-10 px-6 sm:px-16 text-center">
+        <p class="max-w-4xl mx-auto text-base sm:text-lg font-medium leading-relaxed">
+          Identidad visual que equilibra frescura, naturaleza y elegancia bajo un sistema gráfico moderno y sofisticado.
+          Diseñada para proyectar confianza, calidad y bienestar en cada punto de contacto de la marca.
+        </p>
+      </div>
+
+      <!-- Scalloped Color Palette Swatches -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-center text-xs font-bold text-white shadow-inner">
+        <div class="bg-[#6D214F] py-4 px-2 rounded-t-xl mx-0.5">Berry Deep</div>
+        <div class="bg-[#C10D32] py-4 px-2 rounded-t-xl mx-0.5">Strawberry Pop</div>
+        <div class="bg-[#E55039] py-4 px-2 rounded-t-xl mx-0.5">Jamaica Glow</div>
+        <div class="bg-[#F39C12] py-4 px-2 rounded-t-xl mx-0.5">Lime Zest</div>
+        <div class="bg-[#27AE60] py-4 px-2 rounded-t-xl mx-0.5">Lime Deep</div>
+        <div class="bg-[#A3CB38] py-4 px-2 rounded-t-xl mx-0.5 text-stone-900">Lime Mist</div>
+      </div>
+
+      <!-- Typography Specimen Card: Deep Berry Background -->
+      <div class="bg-[#75315A] p-8 sm:p-14 text-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+
+          <!-- Hierarchy Left Column -->
+          <div class="md:col-span-5 space-y-4">
+            <h3 class="font-cursive text-4xl sm:text-5xl text-pink-200">Tipografías</h3>
+
+            <div class="text-sm space-y-3 pt-2">
+              <div>
+                <span class="font-bold text-white block">Neulis Cursive · SemiBold</span>
+                <span class="text-xs text-pink-200">Títulos principales (Extra Bold) / Subtítulos</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Louis George Café · Regular</span>
+                <span class="text-xs text-pink-200">Énfasis o resaltes (Bold) / Cuerpos de texto</span>
+              </div>
+              <p class="text-xs text-white/70 leading-relaxed pt-2">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Specimen Right Column -->
+          <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Neulis Cursive Specimen -->
+            <div class="bg-black/20 p-5 rounded-2xl border border-white/20">
+              <span class="text-xs font-mono text-pink-300">Neulis Cursive</span>
+              <div class="text-6xl font-cursive font-bold my-2">Aa</div>
+              <p class="text-[10px] font-mono leading-tight text-pink-100">Light Regular Italic Medium Bold</p>
+              <p class="text-[9px] font-mono text-white/60 mt-2 break-all">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ
+                abcdefghijklmnñopqrstuvwxyz 0123456789</p>
+            </div>
+
+            <!-- Louis George Café Specimen -->
+            <div class="bg-black/20 p-5 rounded-2xl border border-white/20">
+              <span class="text-xs font-mono text-pink-300">Louis George Café</span>
+              <div class="text-6xl font-sans font-bold my-2">Aa</div>
+              <p class="text-[10px] font-mono leading-tight text-pink-100">Regular Italic Bold Bold Italic</p>
+              <p class="text-[9px] font-mono text-white/60 mt-2 break-all">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ
+                abcdefghijklmnñopqrstuvwxyz 0123456789</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Packaging Pouches & Mobile Mockup Showcase -->
+      <div class="bg-[#B51827] py-14 px-6 sm:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+
+          <!-- Pouch 1: Berry Deep -->
+          <div class="bg-[#6D214F] rounded-3xl p-5 text-center text-white shadow-2xl border-2 border-white/20">
+            <h4 class="text-2xl font-black lowercase mb-1">alpi</h4>
+            <span class="text-[10px] font-black uppercase tracking-widest text-pink-200">FRUIT</span>
+            <div class="my-6 h-52 bg-black/20 rounded-2xl flex items-center justify-center overflow-hidden">
+              <img src="https://placehold.co/400x500/50173A/FFFFFF?text=Berry+Deep+Pouch" alt="Berry Deep Pouch"
+                class="w-full h-full object-cover" />
+            </div>
+            <p class="text-xs font-extrabold uppercase">100% FRUTA NATURAL</p>
+            <p class="text-[9px] text-white/70 mt-1">Berry Deep Edition</p>
+          </div>
+
+          <!-- Pouch 2: Strawberry Pop -->
+          <div class="bg-[#C10D32] rounded-3xl p-5 text-center text-white shadow-2xl border-2 border-white/20">
+            <h4 class="text-2xl font-black lowercase mb-1">alpi</h4>
+            <span class="text-[10px] font-black uppercase tracking-widest text-pink-200">FRUIT</span>
+            <div class="my-6 h-52 bg-black/20 rounded-2xl flex items-center justify-center overflow-hidden">
+              <img src="https://placehold.co/400x500/8B0000/FFFFFF?text=Strawberry+Lemon" alt="Strawberry Lemon Pouch"
+                class="w-full h-full object-cover" />
+            </div>
+            <p class="text-xs font-extrabold uppercase">100% FRUTA NATURAL</p>
+            <p class="text-[9px] text-white/70 mt-1">Strawberry Lemon Edition</p>
+          </div>
+
+          <!-- Pouch 3: Lime Zest -->
+          <div class="bg-[#F39C12] rounded-3xl p-5 text-center text-white shadow-2xl border-2 border-white/20">
+            <h4 class="text-2xl font-black lowercase mb-1">alpi</h4>
+            <span class="text-[10px] font-black uppercase tracking-widest text-yellow-100">FRUIT</span>
+            <div class="my-6 h-52 bg-black/20 rounded-2xl flex items-center justify-center overflow-hidden">
+              <img src="https://placehold.co/400x500/D35400/FFFFFF?text=Lime+Zest+Pouch" alt="Lime Zest Pouch"
+                class="w-full h-full object-cover" />
+            </div>
+            <p class="text-xs font-extrabold uppercase">100% FRUTA NATURAL</p>
+            <p class="text-[9px] text-white/70 mt-1">Lime Zest Edition</p>
+          </div>
+
+          <!-- Smartphone App Mockup (iPhone Screen) -->
+          <div class="bg-stone-900 rounded-[2.5rem] p-3 shadow-2xl border-4 border-stone-700">
+            <div
+              class="bg-[#C10D32] rounded-[2rem] p-4 text-center text-white overflow-hidden relative min-h-[360px] flex flex-col justify-between">
+              <!-- Notch -->
+              <div class="w-20 h-4 bg-stone-900 rounded-full mx-auto mb-2"></div>
+
+              <div>
+                <h4 class="text-xl font-black lowercase">alpi</h4>
+                <span class="text-[9px] font-black uppercase tracking-widest">FRUIT APP</span>
+                <div
+                  class="my-4 w-32 h-32 mx-auto rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
+                  <img src="https://placehold.co/300x300/A3102C/FFFFFF?text=Mobile+Experience" alt="Alpi Mobile App"
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+
+              <div>
+                <p class="text-xs font-extrabold uppercase">100% FRUTA NATURAL</p>
+                <p class="text-[8px] text-white/70 mt-1">Experiencia Digital UX/UI</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Packaging Nutritional Facts Breakdown with Fruit Cutouts -->
+        <div
+          class="max-w-5xl mx-auto mt-12 bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/20 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+          <!-- Left Details: Net Content, Badges & Barcode -->
+          <div class="md:col-span-5 space-y-4">
+            <span class="bg-black/30 text-white font-mono text-xs px-3 py-1 rounded-full uppercase">CONT. NETO 500
+              ml</span>
+            <h3 class="text-3xl font-black lowercase">alpi <span class="uppercase text-lg block font-normal">FRUIT
+                Strawberry Lemon</span></h3>
+
+            <!-- Badges -->
+            <div class="space-y-1.5 text-xs font-bold">
+              <div class="bg-green-600 text-white px-3 py-1 rounded-md inline-block">BAJO EN SAL</div>
+              <p class="text-white/90">✓ No contiene AZÚCAR añadida</p>
+              <p class="text-white/90">✓ No contiene GRASA trans</p>
+            </div>
+
+            <!-- Barcode -->
+            <div class="pt-2">
+              <div class="w-48 h-8 barcode-lines-white"></div>
+              <span class="text-[9px] font-mono text-white/70 block mt-1">No : 123456789000000000</span>
+              <p class="text-[9px] text-white/60 mt-1">Lote y fecha de elaboración/exp en tapa</p>
+            </div>
+          </div>
+
+          <!-- Center Fruits Photography Placeholder -->
+          <div class="md:col-span-3 flex justify-center">
+            <div class="w-44 h-44 rounded-full overflow-hidden border-4 border-white shadow-xl bg-stone-200">
+              <img src="https://placehold.co/400x400/C10D32/FFFFFF?text=Strawberry+%26+Lemon"
+                alt="Fresh Strawberries and Lemons" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Right Nutritional Facts Table -->
+          <div class="md:col-span-4 bg-white text-stone-900 rounded-2xl p-5 text-xs font-mono shadow-xl">
+            <h4 class="font-extrabold text-sm border-b-2 border-stone-900 pb-1 mb-2 uppercase">INFORMACIÓN NUTRICIONAL
+            </h4>
+            <div class="space-y-1 text-[11px]">
+              <div class="flex justify-between border-b border-stone-200 pb-0.5">
+                <span>Contenido:</span>
+                <span>500 ml</span>
+              </div>
+              <div class="flex justify-between border-b border-stone-200 pb-0.5">
+                <span>Porción:</span>
+                <span>250 ml (Aprox. 2)</span>
+              </div>
+              <div class="flex justify-between border-b border-stone-200 pb-0.5">
+                <span>Energía:</span>
+                <span>0 kJ (0 kcal)</span>
+              </div>
+              <div class="flex justify-between border-b border-stone-200 pb-0.5">
+                <span>Grasa total:</span>
+                <span>0 g (0%)</span>
+              </div>
+              <div class="flex justify-between border-b border-stone-200 pb-0.5">
+                <span>Sodio:</span>
+                <span>75 mg (3%)</span>
+              </div>
+              <div class="flex justify-between border-b border-stone-200 pb-0.5">
+                <span>Carbohidratos:</span>
+                <span>
+                  < 1 g (0%)</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Proteínas:</span>
+                <span>0 g</span>
+              </div>
+            </div>
+            <p class="text-[9px] text-stone-500 mt-3 pt-2 border-t border-stone-200 italic">
+              Este producto contiene edulcorante no calórico.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- ==========================================
+         SECTION 5: CASE STUDY 2 — "arča" (by María Eugenia Castillo)
+    =========================================== -->
+    <article id="project-arca" class="relative bg-[#1F421D] text-white">
+
+      <!-- Top Forest Green Branding Area -->
+      <div class="pt-20 pb-16 px-6 sm:px-12 text-center relative overflow-hidden">
+        <!-- Main Logo: arča with leaf accent -->
+        <div class="inline-block relative">
+          <h2 class="text-7xl sm:text-9xl font-futura font-bold tracking-tight lowercase text-[#EEE5C6]">
+            ar<span class="relative">c<span
+                class="absolute -top-6 left-1/2 -translate-x-1/2 text-3xl text-[#2E6B34]">🍃</span></span>a
+          </h2>
+          <p class="text-xs sm:text-sm font-futura tracking-[0.25em] text-[#EEE5C6]/80 mt-1 uppercase">
+            by María Eugenia Castillo
+          </p>
+        </div>
+      </div>
+
+      <!-- Color Palette Bar -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 text-center text-xs font-mono font-bold shadow-md">
+        <div class="bg-[#0F2417] text-white py-4 px-2">Deep Root Green</div>
+        <div class="bg-[#1F421D] text-white py-4 px-2">Forest Core Green</div>
+        <div class="bg-[#2E6B34] text-white py-4 px-2">Vital Leaf Green</div>
+        <div class="bg-[#F58220] text-white py-4 px-2">Golden Papaya</div>
+        <div class="bg-[#EEE5C6] text-stone-900 py-4 px-2">Soft Oat Beige</div>
+      </div>
+
+      <!-- Brand Statement -->
+      <div class="bg-[#265D27] py-12 px-6 sm:px-16 text-center">
+        <p class="max-w-3xl mx-auto text-base sm:text-lg font-futura leading-relaxed text-[#EEE5C6]">
+          El logotipo de arca by María Eugenia Castillo representa la fusión entre identidad profesional y conexión con
+          lo natural. Construido a partir de una tipografía suave y moderna, el diseño se destaca por su simplicidad
+          visual y riqueza simbólica.
+        </p>
+      </div>
+
+      <!-- 3 Photography Mockups: Yellow Stickers, Green Cards, Orange Stationery -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+        <!-- Mockup 1: Yellow Stickers -->
+        <div class="h-80 bg-[#F58220] overflow-hidden flex items-center justify-center p-6">
+          <img src="https://placehold.co/600x600/F58220/FFFFFF?text=Arca+Stickers+Mockup" alt="Arca Round Stickers"
+            class="w-full h-full object-cover shadow-xl rounded-xl" />
+        </div>
+        <!-- Mockup 2: Green Business Cards -->
+        <div class="h-80 bg-[#1F421D] overflow-hidden flex items-center justify-center p-6">
+          <img src="https://placehold.co/600x600/1F421D/FFFFFF?text=Arca+Business+Cards" alt="Arca Business Cards"
+            class="w-full h-full object-cover shadow-xl rounded-xl" />
+        </div>
+        <!-- Mockup 3: Orange Stationery -->
+        <div class="h-80 bg-[#EEE5C6] overflow-hidden flex items-center justify-center p-6">
+          <img src="https://placehold.co/600x600/E87A1E/FFFFFF?text=Arca+Stationery+Mockup"
+            alt="Arca Letterhead Stationery" class="w-full h-full object-cover shadow-xl rounded-xl" />
+        </div>
+      </div>
+
+      <!-- Blueprint Construction Grid -->
+      <div class="bg-grid-blueprint p-8 sm:p-14 text-white">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+          <div class="md:col-span-7 border-2 border-emerald-500/40 p-6 rounded-2xl relative bg-black/40">
+            <!-- Guidelines and X markers -->
+            <span class="text-[10px] font-mono text-emerald-400 absolute top-2 left-2">X : 1.618</span>
+            <span class="text-[10px] font-mono text-emerald-400 absolute bottom-2 right-2">X : 1.618</span>
+
+            <div class="flex items-center justify-around py-6">
+              <div class="text-4xl sm:text-5xl font-futura font-bold text-[#EEE5C6] tracking-wider">
+                a r c a
+              </div>
+              <div
+                class="text-4xl sm:text-5xl font-futura font-bold text-[#EEE5C6] border-l-2 border-emerald-500/40 pl-6">
+                r c 🍃
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5 text-sm font-futura text-[#EEE5C6]/90 leading-relaxed">
+            <h4 class="text-emerald-400 font-bold uppercase text-xs tracking-widest mb-2">GEOMETRÍA & PROPORCIÓN</h4>
+            <p>
+              La forma visual y esencia de la marca es comprometida con la excelencia y el desarrollo sostenible,
+              construida sobre retículas modulares de alta precisión.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Typography Panel: Futura PT -->
+      <div class="bg-[#1F421D] p-8 sm:p-12 border-t border-emerald-900/60">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-6">
+            <h3 class="text-5xl sm:text-6xl font-futura font-extrabold text-white tracking-tight">Futura PT</h3>
+            <p class="text-xs font-futura text-[#EEE5C6]/80 mt-3 leading-relaxed">
+              La tipografía Futura se establece como tipografía institucional para la marca debido a sus propiedades
+              formales y funcionales.
+            </p>
+          </div>
+          <div class="md:col-span-6 text-xs font-futura text-[#EEE5C6] space-y-2">
+            <p class="font-bold tracking-widest uppercase">Light · Book · Medium · Demi · Heavy</p>
+            <p class="font-mono text-[10px] text-white/70 break-all">ABCDEFGHIJKLMNOPQRSTUVWXYZ
+              abcdefghijklmnopqrstuvwxyz 0123456789</p>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+
+    <!-- ==========================================
+         SECTION 6: CASE STUDY 3 — "3TR Born To Ride"
+    =========================================== -->
+    <article id="project-btr" class="relative bg-black text-white">
+
+      <!-- Vivid Orange Section with Wavy Edges -->
+      <div class="bg-[#FA3300] text-white py-20 px-6 sm:px-12 text-center relative overflow-hidden">
+        <!-- Logo 3TR Born To Ride -->
+        <div class="inline-flex flex-col items-center">
+          <div class="flex items-center gap-4">
+            <h2 class="text-7xl sm:text-9xl font-black tracking-tighter uppercase font-urbanist">
+              3TR
+            </h2>
+            <div
+              class="text-left font-urbanist font-black text-base sm:text-xl leading-tight uppercase border-l-4 border-white pl-3">
+              Born<br>To<br>Ride
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex justify-between items-center text-xs font-mono text-white/90 max-w-4xl mx-auto px-4">
+          <span>B.orange</span>
+          <span>≥ ©2603 STORE | E C U</span>
+        </div>
+      </div>
+
+      <!-- Grayscale Section with Vertical Swatches & Typography Urbanist -->
+      <div class="p-8 sm:p-16 max-w-6xl mx-auto">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+
+          <!-- Vertical Swatches Bar (Left) -->
+          <div class="lg:col-span-4 flex flex-col space-y-2 text-xs font-mono">
+            <div class="bg-black border border-white/20 p-3 rounded-lg text-white font-bold">B.black</div>
+            <div class="bg-[#343434] p-3 rounded-lg text-white font-bold">B.dark gray</div>
+            <div class="bg-[#888888] p-3 rounded-lg text-white font-bold">B.gray</div>
+            <div class="bg-[#CCCCCC] p-3 rounded-lg text-stone-900 font-bold">B.light gray</div>
+            <div class="bg-white p-3 rounded-lg text-stone-900 font-bold">B.white</div>
+          </div>
+
+          <!-- Concept Text (Right) -->
+          <div class="lg:col-span-8 flex flex-col justify-center">
+            <h3 class="text-3xl sm:text-4xl font-urbanist font-bold text-white tracking-widest mb-3">b + t + r</h3>
+            <p class="text-sm font-urbanist text-stone-300 leading-relaxed">
+              Se construye a partir de una tipografía personalizada de trazos continuos y formas redondeadas, que
+              transmiten dinamismo, fluidez y modernidad.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Typography Card: Urbanist -->
+        <div class="bg-white text-stone-900 rounded-3xl p-8 sm:p-12 shadow-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div class="md:col-span-6">
+              <h4 class="text-5xl sm:text-7xl font-urbanist font-black tracking-tight">Urbanist</h4>
+              <p class="text-xs font-mono text-stone-500 mt-2">Regular · Italic · Bold · Bold Italic</p>
+            </div>
+            <div class="md:col-span-6 text-xs font-urbanist text-stone-600 leading-relaxed">
+              La tipografía se caracteriza por su diseño limpio, moderno y altamente legible, con formas geométricas y
+              trazos equilibrados que aportan claridad y orden visual.
+            </div>
+          </div>
+        </div>
+
+        <!-- Apparel Mockup Cards Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+          <div class="bg-stone-900 rounded-2xl p-4 border border-stone-800">
+            <img src="https://placehold.co/400x300/111111/FA3300?text=3TR+Jersey" alt="3TR Jersey"
+              class="w-full h-44 object-cover rounded-xl mb-3" />
+            <span class="text-xs font-mono text-stone-400">01 / APPAREL SYSTEM</span>
+          </div>
+          <div class="bg-stone-900 rounded-2xl p-4 border border-stone-800">
+            <img src="https://placehold.co/400x300/111111/FFFFFF?text=3TR+Cap" alt="3TR Cycling Cap"
+              class="w-full h-44 object-cover rounded-xl mb-3" />
+            <span class="text-xs font-mono text-stone-400">02 / CYCLING CAP</span>
+          </div>
+          <div class="bg-stone-900 rounded-2xl p-4 border border-stone-800">
+            <img src="https://placehold.co/400x300/FA3300/FFFFFF?text=3TR+Bottle" alt="3TR Water Bottle"
+              class="w-full h-44 object-cover rounded-xl mb-3" />
+            <span class="text-xs font-mono text-stone-400">03 / PERFORMANCE ACCESSORY</span>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- ==========================================
+         SECTION 7: CASE STUDY 4 — "SOCIAL MEDIA" (MEB & SORELL)
+    =========================================== -->
+    <section id="project-social" class="relative">
+
+      <!-- Blue Tile Header: SOCIAL MEDIA -->
+      <div class="bg-[#648AE9] py-14 px-6 text-center text-white relative overflow-hidden border-b-4 border-white/30">
+        <div class="inline-flex items-center gap-3">
+          <span class="text-4xl text-yellow-300">★</span>
+          <h2 class="text-5xl sm:text-7xl font-black uppercase tracking-tight">
+            SOCIAL MEDIA
+          </h2>
+          <span class="text-4xl text-white">✿</span>
+        </div>
+      </div>
+
+      <!-- SUBSECTION 1: MEB (Asociación Cicloayuda) -->
+      <div class="bg-[#06766E] py-16 px-6 sm:px-12 text-white">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Pill Tab: MEB -->
+          <div
+            class="inline-block bg-[#00928D] text-white font-black text-sm px-6 py-2 rounded-2xl mb-8 uppercase tracking-widest shadow">
+            MEB
+          </div>
+
+          <!-- 6 Poster Cards Grid (2 rows of 3) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+
+            <!-- Card 1 -->
+            <div
+              class="bg-[#F4EAE2] text-stone-900 rounded-2xl p-5 shadow-xl flex flex-col justify-between min-h-[380px]">
+              <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase">ASOCIACIÓN CICLOAYUDA</span>
+              <div class="my-auto py-3">
+                <h4 class="text-lg font-black uppercase text-[#06766E] leading-tight">
+                  EL DÍA QUE EL CICLISMO DEJÓ DE SER HOBBY
+                </h4>
+                <div class="my-3 h-36 bg-stone-300 rounded-xl overflow-hidden">
+                  <img src="https://placehold.co/400x300/06766E/FFFFFF?text=Cyclist+Illustration" alt="Ciclista"
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-stone-500">DESLIZA Y CONOCE MÁS →</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#00928D] text-white rounded-2xl p-5 shadow-xl flex flex-col justify-between min-h-[380px]">
+              <span class="text-[10px] font-mono text-white/80 font-bold uppercase">ASOCIACIÓN CICLOAYUDA</span>
+              <div class="my-auto py-3 text-center">
+                <p class="text-xs uppercase tracking-widest mb-1">Y simplemente empezaste a</p>
+                <h4 class="text-3xl font-black uppercase tracking-tight">VIVIRLO</h4>
+                <div class="my-3 h-36 bg-teal-900/40 rounded-xl overflow-hidden">
+                  <img src="https://placehold.co/400x300/035E58/FFFFFF?text=Ride+Illustration" alt="Ride"
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-white/70">#COMUNIDAD</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-[#FFFDF1] text-stone-900 rounded-2xl p-5 shadow-xl flex flex-col justify-between min-h-[380px]">
+              <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase">ESCUELAS DE CICLISMO</span>
+              <div class="my-auto py-3">
+                <h4 class="text-xl font-black uppercase text-[#06766E] leading-tight">
+                  DONA UN PEDAL
+                </h4>
+                <p class="text-xs font-bold text-stone-600 mb-1">IMPULSA UN SUEÑO</p>
+                <div class="my-2 h-36 bg-stone-300 rounded-xl overflow-hidden">
+                  <img src="https://placehold.co/400x300/333333/FFFFFF?text=Pedal+Donation" alt="Pedal"
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-stone-500">CANELA GIANATELLI</span>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="bg-[#FFFDF1] text-stone-900 rounded-2xl p-5 shadow-xl flex flex-col justify-between min-h-[380px]">
+              <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase">ASOCIACIÓN CICLOAYUDA</span>
+              <div class="my-auto py-3">
+                <h4 class="text-lg font-black uppercase text-[#06766E] leading-tight">
+                  COMER BIEN PARA RENDIR EN LA BICI
+                </h4>
+                <div class="my-3 h-36 bg-stone-300 rounded-xl overflow-hidden">
+                  <img src="https://placehold.co/400x300/E55039/FFFFFF?text=Nutrition+Bowl" alt="Nutrition"
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-stone-500">TOSCANA PATROCINADOR</span>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-[#00928D] text-white rounded-2xl p-5 shadow-xl flex flex-col justify-between min-h-[380px]">
+              <span class="text-[10px] font-mono text-white/80 font-bold uppercase">NUTRICIÓN CICLISTA</span>
+              <div class="my-auto py-3">
+                <h4 class="text-base font-black uppercase leading-tight mb-2">
+                  RENDIR NO DEPENDE DE SUPLEMENTOS CAROS
+                </h4>
+                <div class="my-2 h-36 bg-teal-900/40 rounded-xl overflow-hidden">
+                  <img src="https://placehold.co/400x300/06766E/FFFFFF?text=Meal+Preparation" alt="Meal prep"
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <span class="text-[10px] font-mono text-white/70">ALIMENTACIÓN CONSCIENTE</span>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+              class="bg-[#FFFDF1] text-stone-900 rounded-2xl p-5 shadow-xl flex flex-col justify-between min-h-[380px]">
+              <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase">TESTIMONIAL</span>
+              <div class="my-auto py-3 text-center">
+                <p class="text-xs uppercase text-stone-500 mb-1">POR ESO CONFIAMOS EN:</p>
+                <div class="bg-[#06766E] text-white font-black text-xl py-2 px-4 rounded-xl inline-block mb-3">
+                  TOSCANA
+                </div>
+                <p class="text-xs text-stone-600 leading-tight">
+                  "Porque la energía que te mueve nace de ingredientes naturales."
+                </p>
+              </div>
+              <span class="text-[10px] font-mono text-stone-500">CICLOAYUDA OFICIAL</span>
+            </div>
+
+          </div>
+
+          <!-- Crimson Campaign Subsection (3 Cards) -->
+          <div class="bg-[#730C1C] rounded-3xl p-6 sm:p-10 text-white">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+              <div class="bg-black/30 p-5 rounded-2xl border border-white/20">
+                <span class="text-xs font-mono text-pink-300">CAMPUS MEB</span>
+                <h4 class="text-2xl font-black uppercase my-2">BENEFICIOS</h4>
+                <div class="h-44 bg-stone-800 rounded-xl overflow-hidden my-3">
+                  <img src="https://placehold.co/400x300/8B0000/FFFFFF?text=Membership+Cards+Mockup"
+                    alt="Membership Cards" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-xs text-white/80">Membresía exclusiva para ciclistas urbanos y de ruta.</p>
+              </div>
+
+              <div class="bg-black/30 p-5 rounded-2xl border border-white/20 text-center">
+                <span class="text-xs font-mono text-pink-300">EQUIPO FEMENINO</span>
+                <h4 class="text-xl font-black uppercase my-2">POSTULACIONES</h4>
+                <div class="py-6">
+                  <span class="text-xs uppercase text-white/70 block">HASTA EL</span>
+                  <span class="text-4xl font-black text-pink-200">26.12.2025</span>
+                </div>
+                <p class="text-xs text-white/80">Convocatoria oficial para el equipo élite femenino.</p>
+              </div>
+
+              <div class="bg-black/30 p-5 rounded-2xl border border-white/20">
+                <span class="text-xs font-mono text-pink-300">CIRCUITO AMAZÓNICO</span>
+                <h4 class="text-2xl font-black uppercase my-2">CAMPEONATO</h4>
+                <div class="h-44 bg-stone-800 rounded-xl overflow-hidden my-3">
+                  <img src="https://placehold.co/400x300/8B0000/FFFFFF?text=MTB+Race+Action" alt="Race Poster"
+                    class="w-full h-full object-cover" />
+                </div>
+                <div class="flex justify-between items-center text-xs font-bold text-pink-200">
+                  <span>29 DE MARZO</span>
+                  <span>PEDALEA Y DESCUBRE</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SUBSECTION 2: SORELL (Gourmet Ice Cream) -->
+      <div class="bg-[#D0E7D8] py-16 px-6 sm:px-12 text-stone-900">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Pill Tab: SORELL -->
+          <div
+            class="inline-block bg-[#265D27] text-white font-black text-sm px-6 py-2 rounded-2xl mb-8 uppercase tracking-widest shadow">
+            SORELL
+          </div>
+
+          <!-- 6 Gourmet Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- Sorell 1: Sábado de Sorell -->
+            <div class="bg-white rounded-3xl p-5 shadow-xl border-2 border-emerald-900/10">
+              <div class="h-64 bg-stone-200 rounded-2xl overflow-hidden mb-4">
+                <img src="https://placehold.co/400x500/A0C4B0/1F421D?text=Sabado+de+Sorell" alt="Ice Cream Cone"
+                  class="w-full h-full object-cover" />
+              </div>
+              <h4 class="font-cursive text-2xl font-bold text-stone-800">Sábado de Sorell</h4>
+              <p class="text-xs font-mono text-stone-500 mt-1">CHAULLABAMBA · PLAZA 33 · 8:30AM A 21:00PM</p>
+            </div>
+
+            <!-- Sorell 2: Choco Menta Melting -->
+            <div class="bg-white rounded-3xl p-5 shadow-xl border-2 border-emerald-900/10">
+              <div class="h-64 bg-stone-200 rounded-2xl overflow-hidden mb-4">
+                <img src="https://placehold.co/400x500/78A890/FFFFFF?text=Choco+Menta+Scoop" alt="Choco Menta Scoop"
+                  class="w-full h-full object-cover" />
+              </div>
+              <h4 class="font-cursive text-2xl font-bold text-stone-800">Choco Menta</h4>
+              <p class="text-xs font-mono text-stone-500 mt-1">JUST MELTING · UN CLÁSICO</p>
+            </div>
+
+            <!-- Sorell 3: Caramelo y Nuez with Popover UI Menu -->
+            <div class="bg-white rounded-3xl p-5 shadow-xl border-2 border-emerald-900/10 relative">
+              <div class="h-64 bg-stone-200 rounded-2xl overflow-hidden mb-4 relative">
+                <img src="https://placehold.co/400x500/D48B4E/FFFFFF?text=Caramelo+y+Nuez" alt="Caramelo y Nuez Cake"
+                  class="w-full h-full object-cover" />
+
+                <!-- Floating Context Menu UI Widget -->
+                <div
+                  class="absolute right-3 bottom-3 bg-white/95 backdrop-blur-md rounded-xl p-2 shadow-2xl text-[10px] font-sans w-28">
+                  <div class="border-b border-stone-200 py-0.5 font-bold">Vista ›</div>
+                  <div class="border-b border-stone-200 py-0.5 text-stone-600">Info ›</div>
+                  <div class="bg-blue-600 text-white rounded px-1.5 py-0.5 font-bold text-center my-1">NUEVO POSTRE
+                  </div>
+                  <div class="text-stone-500">Copiar</div>
+                </div>
+              </div>
+              <h4 class="font-cursive text-2xl font-bold text-stone-800">Caramelo y Nuez</h4>
+              <p class="text-xs font-mono text-stone-500 mt-1">¿YA LO PROBASTE?</p>
+            </div>
+
+            <!-- Sorell 4: Cookies & Cream -->
+            <div class="bg-white rounded-3xl p-5 shadow-xl border-2 border-emerald-900/10">
+              <div class="h-64 bg-stone-200 rounded-2xl overflow-hidden mb-4">
+                <img src="https://placehold.co/400x500/555555/FFFFFF?text=Cookies+%26+Cream" alt="Cookies and Cream"
+                  class="w-full h-full object-cover" />
+              </div>
+              <h4 class="font-cursive text-2xl font-bold text-stone-800">Cookies & Cream</h4>
+              <p class="text-xs font-mono text-stone-500 mt-1">EL SABOR QUE TODOS AMAN</p>
+            </div>
+
+            <!-- Sorell 5: Choco Menta Bowl -->
+            <div class="bg-white rounded-3xl p-5 shadow-xl border-2 border-emerald-900/10">
+              <div class="h-64 bg-stone-200 rounded-2xl overflow-hidden mb-4">
+                <img src="https://placehold.co/400x500/78A890/FFFFFF?text=Choco+Menta+Bowl" alt="Choco Menta Bowl"
+                  class="w-full h-full object-cover" />
+              </div>
+              <h4 class="font-cursive text-2xl font-bold text-stone-800">Choco Menta</h4>
+              <p class="text-xs font-mono text-stone-500 mt-1">UN CLÁSICO QUE TRASCIENDE</p>
+            </div>
+
+            <!-- Sorell 6: Pie de Limón -->
+            <div class="bg-white rounded-3xl p-5 shadow-xl border-2 border-emerald-900/10">
+              <div class="h-64 bg-stone-200 rounded-2xl overflow-hidden mb-4">
+                <img src="https://placehold.co/400x500/F2D388/1F421D?text=Pie+de+Limon" alt="Pie de Limon"
+                  class="w-full h-full object-cover" />
+              </div>
+              <h4 class="font-cursive text-2xl font-bold text-stone-800">Pie de Limón</h4>
+              <p class="text-xs font-mono text-stone-500 mt-1">TEXTURA Y SABOR EN EQUILIBRIO</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 8: CASE STUDY 5 — "NEXT SWIM" (Swimmy The Shark Mascot)
+    =========================================== -->
+    <article id="project-swim" class="bg-[#5447B8] text-white py-16 px-6 sm:px-12 relative">
+      <div class="max-w-5xl mx-auto">
+
+        <!-- Pill Tab: NEXT SWIM -->
+        <div
+          class="inline-block bg-[#3E3799] text-white font-black text-sm px-6 py-2 rounded-2xl mb-8 uppercase tracking-widest shadow border border-white/20">
+          NEXT SWIM
+        </div>
+
+        <!-- Mascot Hero Presentation -->
+        <div class="text-center my-6">
+          <h2 class="text-5xl sm:text-7xl font-black uppercase tracking-wider text-white">
+            SWIMMY
+          </h2>
+          <span class="text-sm font-mono tracking-[0.4em] text-pink-200 uppercase block -mt-1">THE SHARK</span>
+
+          <!-- Main Superhero Shark Mascot Illustration (Rich SVG Vector) -->
+          <div class="w-64 h-64 sm:w-80 sm:h-80 mx-auto my-6 relative">
+            <svg viewBox="0 0 160 160" class="w-full h-full filter drop-shadow-2xl">
+              <!-- Flowing Red Superhero Cape -->
+              <path d="M 30 75 Q 80 60 130 75 Q 145 125 100 135 Q 80 100 60 135 Z" fill="#E5481B" stroke="#B81534"
+                stroke-width="3" />
+              <!-- Shark Body -->
+              <ellipse cx="80" cy="85" rx="42" ry="48" fill="#D8D4F7" stroke="#3E3799" stroke-width="4" />
+              <!-- Shark White Belly -->
+              <ellipse cx="80" cy="98" rx="28" ry="32" fill="white" />
+              <!-- Red Swimming Goggles -->
+              <rect x="52" y="60" width="24" height="16" rx="5" fill="#E5481B" stroke="#B81534" stroke-width="2" />
+              <rect x="84" y="60" width="24" height="16" rx="5" fill="#E5481B" stroke="#B81534" stroke-width="2" />
+              <line x1="76" y1="68" x2="84" y2="68" stroke="#3E3799" stroke-width="3.5" />
+              <!-- Goggles Lenses Reflection -->
+              <circle cx="64" cy="68" r="4" fill="white" opacity="0.6" />
+              <circle cx="96" cy="68" r="4" fill="white" opacity="0.6" />
+              <!-- Big Shark Smile with Teeth -->
+              <path d="M 54 88 Q 80 114 106 88 Z" fill="#3E3799" />
+              <path d="M 58 89 L 64 96 L 70 89 L 76 96 L 82 89 L 88 96 L 94 89 L 100 96" stroke="white" stroke-width="3"
+                fill="white" />
+              <!-- Fins -->
+              <path d="M 38 88 Q 12 95 28 112 Q 42 100 44 92" fill="#D8D4F7" stroke="#3E3799" stroke-width="3.5" />
+              <path d="M 122 88 Q 148 95 132 112 Q 118 100 116 92" fill="#D8D4F7" stroke="#3E3799" stroke-width="3.5" />
+              <!-- Top Fin -->
+              <path d="M 72 40 Q 80 20 90 38 Z" fill="#D8D4F7" stroke="#3E3799" stroke-width="3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 4 Mascot Poses in a Row -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/20">
+
+          <div class="bg-[#3E3799] p-4 rounded-2xl text-center border border-white/20">
+            <div class="h-28 flex items-center justify-center">
+              <span class="text-4xl">💭🦈</span>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-pink-200">01 / REFLEXIVO</span>
+          </div>
+
+          <div class="bg-[#3E3799] p-4 rounded-2xl text-center border border-white/20">
+            <div class="h-28 flex items-center justify-center">
+              <span class="text-4xl">🦸‍♂️🦈</span>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-pink-200">02 / ENTRENADOR</span>
+          </div>
+
+          <div class="bg-[#3E3799] p-4 rounded-2xl text-center border border-white/20">
+            <div class="h-28 flex items-center justify-center">
+              <span class="text-4xl">🥇🦈</span>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-pink-200">03 / CAMPEÓN PODIO</span>
+          </div>
+
+          <div class="bg-[#3E3799] p-4 rounded-2xl text-center border border-white/20">
+            <div class="h-28 flex items-center justify-center">
+              <span class="text-4xl">⚡🦈</span>
+            </div>
+            <span class="text-[11px] font-mono font-bold text-pink-200">04 / AL AGUA</span>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- ==========================================
+         SECTION 9: AUDIO VISUALES
+    =========================================== -->
+    <section id="audio-visuales" class="relative">
+
+      <!-- Orange Grid Header: AUDIO VISUALES -->
+      <div class="bg-grid-orange py-14 px-6 text-center text-white relative border-b-4 border-white/30">
+        <div class="inline-flex items-center gap-3">
+          <span class="text-3xl text-yellow-300">★</span>
+          <h2 class="text-5xl sm:text-7xl font-black uppercase tracking-tight">
+            AUDIO VISUALES
+          </h2>
+          <span class="text-3xl text-white">🎬</span>
+        </div>
+      </div>
+
+      <!-- Video Player Showcase Mockup -->
+      <div class="bg-[#111] p-6 sm:p-14">
+        <div
+          class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl relative border-4 border-stone-700 bg-stone-900 group">
+
+          <!-- Collage Artwork Thumbnail Placeholder -->
+          <div class="aspect-video w-full bg-cover bg-center relative flex items-center justify-center">
+            <img src="https://placehold.co/1280x720/193DBD/FFFFFF?text=Reel+Showcase+2026" alt="Audio Visuales Reel"
+              class="w-full h-full object-cover filter brightness-75" />
+
+            <!-- Big Circular Play Button with Shadow -->
+            <button aria-label="Play Reel"
+              class="absolute w-20 h-20 sm:w-28 sm:h-28 bg-white/95 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
+              <svg class="w-10 h-10 sm:w-12 sm:h-12 fill-[#191919] translate-x-1" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </button>
+
+            <!-- Corner Badge -->
+            <div
+              class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white text-xs font-mono font-bold px-3 py-1.5 rounded-lg">
+              SHOWREEL MOTION & UX · 01:45
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 10: FOOTER & CONTACT — "MUCHOS THANKS"
+    =========================================== -->
+    <footer id="contact" class="bg-grid-blue py-20 px-6 sm:px-12 text-white relative">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+        <!-- Left: Muchos Thanks Headline & Cartoon Mascot -->
+        <div class="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
+          <h2 class="text-6xl sm:text-8xl font-black tracking-tight leading-none uppercase">
+            Muchos<br>Thanks
+          </h2>
+          <p class="text-lg sm:text-xl font-medium text-blue-200 mt-2">
+            ¡Que tengas un día súper cool! ✨
+          </p>
+
+          <!-- Big Cute Mascot Cutout Sticker -->
+          <div class="w-44 h-44 sm:w-56 sm:h-56 mt-6">
+            <svg viewBox="0 0 120 120" class="w-full h-full filter drop-shadow-2xl">
+              <!-- Bunny Ears -->
+              <ellipse cx="44" cy="25" rx="8" ry="20" fill="white" stroke="#2741E3" stroke-width="4"
+                transform="rotate(-8 44 25)" />
+              <ellipse cx="76" cy="25" rx="8" ry="20" fill="white" stroke="#2741E3" stroke-width="4"
+                transform="rotate(8 76 25)" />
+              <!-- Head -->
+              <circle cx="60" cy="65" r="34" fill="white" stroke="#2741E3" stroke-width="4" />
+              <!-- Sunglasses -->
+              <rect x="36" y="55" width="20" height="15" rx="5" fill="#2741E3" />
+              <rect x="64" y="55" width="20" height="15" rx="5" fill="#2741E3" />
+              <line x1="56" y1="62" x2="64" y2="62" stroke="#2741E3" stroke-width="3" />
+              <!-- Waving Hand -->
+              <circle cx="102" cy="50" r="10" fill="white" stroke="#2741E3" stroke-width="3.5" />
+              <path d="M 52 82 Q 60 88 68 82" stroke="#2741E3" stroke-width="3.5" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: Contact Direct Links -->
+        <div class="md:col-span-5 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/20 space-y-6">
+          <h3 class="text-xl font-bold uppercase tracking-wider text-yellow-300">¿Hablamos?</h3>
+
+          <div class="space-y-4 text-sm font-semibold">
+            <!-- WhatsApp / Phone -->
+            <a href="tel:+593959272444"
+              class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors">
+              <span class="text-2xl">💬</span>
+              <div>
+                <span class="text-[10px] text-white/60 block uppercase font-mono">WhatsApp & Móvil</span>
+                <span class="text-base font-bold">+593 959 272 444</span>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:mcquitovin@gmail.com"
+              class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors">
+              <span class="text-2xl">✉️</span>
+              <div>
+                <span class="text-[10px] text-white/60 block uppercase font-mono">Correo Electrónico</span>
+                <span class="text-base font-bold">mcquitovin@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- Instagram / Portfolio -->
+            <a href="https://instagram.com" target="_blank" rel="noopener"
+              class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors">
+              <span class="text-2xl">📸</span>
+              <div>
+                <span class="text-[10px] text-white/60 block uppercase font-mono">Instagram & Social</span>
+                <span class="text-base font-bold">@se_ok.0</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="pt-4 border-t border-white/20 text-center">
+            <span class="text-xs font-mono text-white/70">© 2026 Alkemist UX/UI Portfolio · All Rights Reserved</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Bottom Interaction Bar (Behance-Style Feedback & Like Button) -->
+    <div
+      class="bg-[#111] text-white py-6 px-6 border-t border-stone-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl shadow-lg hover:scale-105 cursor-pointer">
+          👍
+        </div>
+        <div class="text-left">
+          <h4 class="font-bold text-sm">Portafolio 2026</h4>
+          <span class="text-xs text-stone-400">👍 460 · 👁️ 15.1 mil · 💬 2</span>
+        </div>
+      </div>
+      <div class="text-xs text-stone-400">
+        Diseño con la mente y dibujo con el corazón. Profesionalismo, texturas y un poco de azul.
+      </div>
+    </div>
+
+  </main>
+
+</body>
+
+</html>
